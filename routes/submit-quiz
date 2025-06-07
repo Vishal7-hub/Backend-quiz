@@ -1,0 +1,42 @@
+const express = require('express');
+const router = express.Router();
+const QuizSubmission = require('../models/QuizSubmission');
+const Question = require('../models/Question');
+const authenticateToken = require('../middleware/authMiddleware');
+
+router.post('/submit-quiz', authenticateToken, async (req, res) => {
+  try {
+    const { answers, studentName } = req.body;
+
+    let score = 0;
+    const evaluatedAnswers = [];
+
+    for (const ans of answers) {
+      const question = await Question.findById(ans.questionId);
+      const isCorrect = question && question.correctAnswer === ans.selectedOption;
+      if (isCorrect) score++;
+
+      evaluatedAnswers.push({
+        questionId: ans.questionId,
+        selectedOption: ans.selectedOption,
+        isCorrect
+      });
+    }
+
+    const submission = new QuizSubmission({
+      studentName,
+      answers: evaluatedAnswers,
+      score,
+      totalQuestions: evaluatedAnswers.length
+    });
+
+    await submission.save();
+
+    res.status(201).json({ message: 'Quiz submitted successfully', score });
+  } catch (error) {
+    console.error('Error submitting quiz:', error);
+    res.status(500).json({ message: 'Quiz submission failed', error });
+  }
+});
+
+module.exports = router;
