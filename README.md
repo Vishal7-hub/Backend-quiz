@@ -1,4 +1,4 @@
-# 🚀 Smart Quiz Platform Backend
+#  Smart Quiz Platform Backend
 
 A scalable backend system built using **Node.js**, **Express.js**, **MongoDB Atlas**, and **JWT Authentication**.
 
@@ -6,9 +6,9 @@ Designed for schools, colleges, coding contests, and online assessments.
 
 ---
 
-# 📌 Features
+#  Features
 
-### 👨‍🎓 Student
+###  Student
 
 - Register/Login
 - Attempt Quiz
@@ -19,7 +19,7 @@ Designed for schools, colleges, coding contests, and online assessments.
 
 ---
 
-### 👨‍🏫 Faculty/Admin
+###  Faculty/Admin
 
 - Secure JWT Login
 - Add Questions
@@ -30,7 +30,7 @@ Designed for schools, colleges, coding contests, and online assessments.
 
 ---
 
-### 🏆 Leaderboard
+###  Leaderboard
 
 - Top 10 Students
 - Score Ranking
@@ -39,7 +39,7 @@ Designed for schools, colleges, coding contests, and online assessments.
 
 ---
 
-### 📩 Feedback System
+###  Feedback System
 
 - Users can submit feedback
 - Stores feedback in MongoDB
@@ -62,7 +62,7 @@ Designed for schools, colleges, coding contests, and online assessments.
 
 ---
 
-# 📂 Folder Structure
+#  Folder Structure
 
 ```
 Backend-Quiz
@@ -92,7 +92,7 @@ Backend-Quiz
 
 ---
 
-# 🔐 Authentication
+#  Authentication
 
 JWT Authentication protects all admin APIs.
 
@@ -104,7 +104,7 @@ Protected Routes
 
 ---
 
-# 🌐 REST APIs
+#  REST APIs
 
 ## Authentication
 
@@ -152,12 +152,12 @@ GET `/api/leaderboard/top`
 
 ---
 
-# ⚡ Installation
+#  Installation
 
 Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/Backend-Quiz.git
+git clone https://github.com/Vishal7-hub/Backend-quiz.git
 ```
 
 Install Packages
@@ -182,7 +182,7 @@ node index.js
 
 ---
 
-# 🚀 Future Enhancements
+#  Future Enhancements
 
 - AI-based Question Recommendation
 - Email Verification
@@ -197,13 +197,13 @@ node index.js
 
 ---
 
-# 📸 API Testing
+#  API Testing
 
 The APIs were tested using **Postman**.
 
 ---
 
-# 📚 Learning Outcomes
+#  Learning Outcomes
 
 During this project I learned
 
@@ -219,7 +219,7 @@ During this project I learned
 
 ---
 
-# 👨‍💻 Author
+#  Author
 
 **Vishal**
 
